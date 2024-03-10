@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@100;300;500&display=swap');
+
+
+/* 基本布局和样式 */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #808080;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+	font-weight: 100;
+	line-height: 1.8;
+}
+
+/*=============================
+ * header
+===============================*/
+.header {
+    position: fixed; /* Keep the header visible */
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    width: 50%; /* Initial width */
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    transition: width 0.5s ease; /* Smooth transition for width change */
+}
+
+
+.header-content {
+	margin-top: 7vw;
+    margin-left: auto;
+    margin-right: 3vw;
+    text-align: right;
+    width: fit-content;
+}
+
+
+/* 以下样式保持不变 */
+.header h1, #nav ul, .contact-icon {
+    align-self: flex-end; /* 确保所有子项都靠右对齐 */
+    text-align: right; /* 文本靠右对齐 */
+}
+
+.header h1 {
+    color: #fff; /* 保持原有的白色字体 */
+    font-weight: 400; /* 将字重设置为400，代表常规字重 */
+    /* 其他样式保持不变 */
+}
+
+
+/* 调整图片尺寸和样式 */
+.header .avatar img {
+    width: 10vw; /* 调整头像图片的最大宽度 */
+    height: auto; /* 保持图片的原始宽高比 */
+    align-self: flex-end; /* 确保图片也靠右对齐 */
+	margin-bottom: 2vw;
+}
+
+/* footer */
+footer {
+    text-align: right; /* 使内容靠右排列 */
+}
+
+.contact-icons {
+    list-style: none; /* 去掉列表项前的点 */
+    display: flex; /* 同行排列 */
+    justify-content: flex-end; /* 靠右排列 */
+    padding: 0; /* 去除默认的padding */
+}
+
+.contact-icons li {
+    margin-left: 15px; /* 列表项之间的间距 */
+}
+
+.contact-icons li a {
+    color: #909090; /* 链接颜色为深灰色 */
+    font-size: 24px; /* 增大图标大小 */
+    display: flex; /* 使图标和文本垂直居中 */
+    align-items: center;
+	text-decoration: none;
+}
+
+.contact-icons li a i {
+    margin-right: 5px; /* 图标和文本之间的间距 */
+}
+
+.contact-icons a:hover {
+	color: #c0c0c0;
+}
+
+/* nav */
+#nav {
+	margin-top: 2.5vw;
+}
+
+/* 移除列表的左边点 */
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul li {
+	margin-top: 1.5vw;
+}
+
+/* 移除链接的下划线 */
+#nav ul li a {
+    text-decoration: none;
+    color: inherit; /* 可选，保持链接颜色和周围文本一致 */
+}
+
+#nav a:hover {
+	color: #c0c0c0;
+}
+
+/*=============================
+ * main
+===============================*/
+.main {
+    position: relative;
+	width: 47%;
+    left: 50%; /* Initial left offset */
+    transition: left 0.5s ease, width 0.5s ease; /* Smooth transition */
+    margin-left: 3vw;
+    word-wrap: break-word; /* 允许长单词/URL等在边界内自动换行 */
+    overflow-wrap: break-word; /* 同上，但更现代的属性名称 */
+	margin-top: 10vw;
+}
+
+/* Modify <h2> font size */
+h2 {
+    font-size: 2.7vw; /* Adjust the size as needed */
+	font-weight: 100;
+	margin-bottom: 4vw;
+}
+
+h3 {
+    font-size: 2.3vw; /* Adjust the size as needed */
+	font-weight: 100;
+	margin-bottom: 2.5vw;
+}
+
+h4 a {
+	color: #808080;
+	text-decoration: none;
+}
+
+h4 a:hover {
+	color: #c0c0c0;
+}
+
+.module {
+	margin-bottom: 8vw;
+}
+
+
+
+/* about */
+
+/* education */
+.school {
+    display: flex; /* 保持 flex 布局 */
+    flex-direction: column; /* 调整布局方向为垂直 */
+    align-items: flex-start; /* 确保子元素在交叉轴的起点对齐（这里是左对齐） */
+    margin-bottom: 1.5vw;
+}
+
+.school-top {
+    display: flex; /* 应用 flex 布局以支持内部元素的左右布局 */
+    justify-content: space-between; /* 保持子元素在主轴两端对齐 */
+    width: 100%; /* 确保 .school-top 占满父容器的宽度 */
+}
+
+.school-name h4 {
+	font-family: 'Georgia', Times, 'Times New Roman', serif;
+	font-size: 1.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.2vw; /* 减小 h4 与 .date 间的下边距 */
+    /* 根据具体情况调整此值以达到期望的视觉效果 */
+}
+
+.date {
+    /* 原有样式保留，适合显示日期 */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    margin-top: 0.05vw;
+    margin-bottom: 0.05vw;
+}
+
+.school-image {
+    text-align: right; /* 保持图片靠右对齐 */
+}
+
+.school-image img {
+    width: 12vw;
+    height: auto;
+	margin-top: 0.5vw;
+}
+
+.school-text a {
+	color: #808080;
+	text-decoration: none;
+}
+
+.school-text a:hover{
+	color: #c0c0c0;
+}
+
+/* research experience */
+
+#uci-lab .school-image img{
+	width: 16vw;
+	margin-top: 1vw;
+}
+
+#hit-lab .school-image img{
+	width: 16vw;
+	margin-top: 1vw;
+}
+
+/* Publication */
+.paper {
+    display: flex; /* 应用 flex 布局以支持内部元素的左右布局 */
+    justify-content: start; /* 保持子元素在主轴两端对齐 */
+    width: 100%; /* 确保 .school-top 占满父容器的宽度 */
+	align-items: center;
+	margin-bottom: 2.5vw;
+}
+
+.paper-image {
+    text-align: left; /* 保持图片靠右对齐 */
+	margin-right: 2vw;
+}
+
+.paper-image img {
+    width: 12vw;
+    height: 8vw;
+}
+
+
+
+.paper-text a {
+	color: #808080;
+	text-decoration: none;
+	font-size: 1vw;
+}
+
+.paper-text a:hover{
+	color: #c0c0c0;
+}
+
+.pdf-link {
+    border: 1px solid #808080; /* 添加边框 */
+    box-sizing: border-box;
+    border-radius: 5px; /* 添加边框弧度 */
+    padding: 0.1vw 0.3vw; /* 内部填充，根据需要调整 */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.3vw; /* 调整字体大小，根据需要调整 */
+    text-decoration: none; /* 去除下划线 */
+    color: #808080; /* 文本颜色，根据需要调整 */
+	font-weight: 100;
+}
+
+.pdf-link:hover {
+    color: #c0c0c0; /* 鼠标悬停时的文本颜色 */
+    border-color: #c0c0c0; /* 鼠标悬停时的边框颜色 */
+}
+
+.paper-author {
+	margin-top: -1.5vw;
+	font-size: 1vw;
+	margin-bottom: 1.5vw;
+}
+
+.paper-information {
+	font-family: 'Courier New', Courier, monospace;
+	margin-top: -1.5vw;
+	font-size: 1vw;
+	letter-spacing: -0.05vw; /* 字母之间的间距更小 */
+	word-spacing: -0.15vw; /* 单词之间的间距更小 */
+}
+
+
+/* 平板电脑和以下尺寸 */
+@media (max-width: 768px) {
+    .header {
+        position: relative; /* 更改为relative，使其不固定 */
+        width: 100%; /* 让头部占满全宽 */
+        height: auto; /* 高度自适应 */
+        top: 0; /* 确保它在顶部 */
+        left: 0; /* 重置左边距 */
+    }
+    
+	.header .avatar img  {
+		width: 25vw;
+		margin-bottom: -3vw;
+	}
+	
+    .main {
+        width: 90%; /* 主内容区域宽度调整 */
+        left: 5%; /* 居中显示 */
+        margin-left: 0; /* 重置左边距 */
+        margin-top: 2vw; /* 调整顶部边距以适应可能的头部高度变化 */
+		font-size: 2.5vw;
+    }
+    
+    /* 调整标题和其他元素的尺寸 */
+    h2, h3 {
+        font-size: 6vw;
+    }
+	
+	.school-name h4 {
+		font-size: 3.5vw;
+	}
+	
+	.date {
+		font-size: 3vw;
+	}
+	
+	.school-image img {
+		width: 20vw;
+	}
+	
+	#uci-lab .school-image img{
+		width: 22vw;
+	}
+	
+	#hit-lab .school-image img{
+		width: 22vw;
+	}
+	
+	.paper-text {
+		text-align: left;
+	}
+	
+	.paper-text * {
+		text-align: left;
+	}
+	
+	.paper-head {
+		text-align: left;
+	}
+	
+	.paper-head a {
+		font-size: 2vw;
+	}
+	
+	.paper-author {
+		font-size: 1.5vw;
+		margin-top: -2.5vw;
+	}
+	
+	.paper-information {
+		font-size: 1.5vw;
+	}
+	
+	.paper-image img {
+		width: 16vw;
+		height: 10vw;
+		margin-top: 2.5vw;
+	}
+}
+
+/* 手机和以下尺寸 */
+@media (max-width: 480px) {
+    .header {
+        position: relative; /* 更改为relative，使其不固定 */
+        width: 100%; /* 让头部占满全宽 */
+        height: auto; /* 高度自适应 */
+        top: 0; /* 确保它在顶部 */
+        left: 0; /* 重置左边距 */
+    }
+    
+    .header .avatar img  {
+    	width: 25vw;
+    	margin-bottom: -3vw;
+    }
+    
+    .main {
+        width: 90%; /* 主内容区域宽度调整 */
+        left: 5%; /* 居中显示 */
+        margin-left: 0; /* 重置左边距 */
+        margin-top: 2vw; /* 调整顶部边距以适应可能的头部高度变化 */
+    	font-size: 2.5vw;
+    }
+    
+    /* 调整标题和其他元素的尺寸 */
+    h2, h3 {
+        font-size: 6vw;
+    }
+    
+    .school-name h4 {
+    	font-size: 3.5vw;
+    }
+    
+    .date {
+    	font-size: 3vw;
+    }
+    
+    .school-image img {
+    	width: 20vw;
+    }
+    
+    #uci-lab .school-image img{
+    	width: 22vw;
+    }
+    
+    #hit-lab .school-image img{
+    	width: 22vw;
+    }
+    
+    .paper-text {
+    	text-align: left;
+    }
+    
+    .paper-text * {
+    	text-align: left;
+    }
+    
+    .paper-head {
+    	text-align: left;
+    }
+    
+    .paper-head a {
+    	font-size: 2vw;
+    }
+    
+    .paper-author {
+    	font-size: 1.5vw;
+    	margin-top: -2.5vw;
+    }
+    
+    .paper-information {
+    	font-size: 1.5vw;
+    }
+    
+    .paper-image img {
+    	width: 16vw;
+    	height: 10vw;
+    	margin-top: 2.5vw;
+    }
+}
+
+
